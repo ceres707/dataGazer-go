@@ -58,7 +58,7 @@ Now we have a navigation tree with a breadcrumb, state handling, a reload mechan
 AS entry_distribution ON entry_distribution.id = { % 1 % };
 ```
 
-Antecedents / State of the art: _"ORM Is an Offensive Anti-Pattern, Yegor Bugayenko 1 Dec. 2014_ — https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html
+Antecedents / State of the art: _"ORM Is an Offensive Anti-Pattern", Yegor Bugayenko 1 Dec. 2014_ — https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html
 
 _Expression_ files are used for naming the elements of that `GAZE`. Notice that **there are no “columns” as such; what we aim for is semantic induction** — basically objects with operations. So this expression description uses `expr` (https://github.com/expr-lang/expr widely used and mature) for Golang and `eval()` for Ruby clients, that depict each element of the view. With this, the whole thing is considered a _Gaze_. It might be a good idea, and very cheap timewise, to define one for each client type.
 
