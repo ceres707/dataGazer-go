@@ -36,7 +36,7 @@ Some runtime checks are a must, mostly to avoid affecting multiple rows at once.
 ## Gazes
 
 ```
-CREATE [ROOT] GAZE Gaze1 DESC 'Describing text' [GRANTED Role1] [LOCKS [AND STOPS AT] Semaphore1 | STOPS AT Semaphore1]
+CREATE [ROOT] GAZE Gaze1 DESC 'Describing text' [GRANTED TO Role1] [LOCKS [AND STOPS AT] Semaphore1 | STOPS AT Semaphore1]
 EXPORTS Param1, Param2 TO GAZE Gaze3 DESC 'Describing how to use that params in the next view'
 EXPORTS Param2 TO GAZE Gaze5 DESC 'Describing how to use that params in the next view'
 EXPORTS Param1 TO OPERATION Operation3 DESC 'Describing the same as above'
