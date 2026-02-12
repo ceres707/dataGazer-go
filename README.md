@@ -27,6 +27,8 @@ All data is filtered by the server, no leaks
 
 Semantic _semaphores_ at design time help avoid complex locks for critical parts of the organization, nevertheless you always end up doing some of this anyway. The server is going to lock users, and maybe there will be an option to talk to the users that lock the resource, or whoever. In the grammar this is common:`LOCKS AND STOPS AT Semaphore1`, or for a foreign stop as `LOCKS SemaphoreAilleurs2`, and the other resource simply `STOPS AT SemaphoreAilleurs2`. This is quite good approach for organizations (or sub-systems used by) of about 200–500人, which is the scenario we’re aiming for.
 
+N.B. on "nevertheless you always end up doing some of this anyway": databases have long used unlocking mechanisms such as MVCC in which a coherent version is always presented to users. While this is enough at logical level, experience say this is not the case at a organizational or business level.
+
 Key bindings and other things are custom. The reason is that, computationally speaking, we come from 1992—maybe 1996—and we love to **invent things**, not just copy.
 
 All operations are granted to the admin group. There will be folders for each role that include files with public keys; in the grammar, `GRANTED TO Admin` is the default even if it doesn’t appear explicitly.
