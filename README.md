@@ -22,7 +22,8 @@ _Compiling_ means parsing and testing the grammars below and generating a signed
 _Session_ handshake is critical and done with a shared secret. There’s also a _SessionWatermark_ which, if it can’t be resolved with that secret, means the connection is considered broken.
 
 We seek for a compression mechanism with encryption that runs really fast (tend to think those exist).
-**UPDATE 2026-02-20Z**: For this project — and to make sure it succeeds in practice :) , we are going to use application-level encryption, no matter is we use plain sockets, ws or wss. Chances are: Zstd /LZ4 + AES-GCM / ChaCha20
+
+**UPDATE 2026-02-20Z**: For this project — and to make sure it succeeds in practice 🙌, we are going to use application-level encryption, no matter is we use plain sockets, ws or wss. Chances are: Zstd /LZ4 + AES-GCM / ChaCha20.
 
 All data is filtered by the server, no leaks
 
